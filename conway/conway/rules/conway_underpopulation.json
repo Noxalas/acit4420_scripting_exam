@@ -1,0 +1,10 @@
+{
+	"id": "conway_underpopulation",
+	"description": "Any live cell with fewer than two live neighbors dies.",
+	"conditions": {
+		"operator": "less_than",
+		"value": 2,
+		"cell_state": "alive"
+	},
+	"action": "die"
+}
