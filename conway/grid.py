@@ -29,6 +29,12 @@ class Grid:
 
         self.grid_wrap = grid_wrap
 
+        self.set_cell(1, 0, 1)
+        self.set_cell(2, 1, 1)
+        self.set_cell(0, 2, 1)
+        self.set_cell(1, 2, 1)
+        self.set_cell(2, 2, 1)
+
     def set_cell(self, x: int, y: int, state: int) -> None:
         """
         Set the state of a specific cell in the grid.
