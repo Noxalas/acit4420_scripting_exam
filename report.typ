@@ -20,17 +20,8 @@
     ]
 )
 
-#show: word-count
-
-In this document, there are #total-words words all added up.
-
 #title([ACIT4420 Problem-solving with scripting])
-
-Things left:
-- courier_optimizer code
-- unit tests
-- figures showing successful pytest runs
-- flow diagram of the courier_optimizer
+Candidate: 503
 
 #pagebreak()
 
@@ -84,11 +75,7 @@ Input data is rarely perfect. The system implements a strict validation layer us
 
 Invalid rows are not discarded silently. Instead, they are logged to a specific `rejected.csv` file, preserving data integrity and allowing the user to correct the source data.
 
-#pagebreak()
-
 == Conway's Game of Life simulator
-While cellular automata simulators may already be a thoroughly solved problem, especially ones simulating Conway's Game of Life specifically................................................
-
 === Design overview
 Similarly to `courier_optimizer`, this package can be ran with command-line arguments, allowing for user-defined input. In this case, the user can supply the program a ruleset for use in cellular automata evolution (more on this later), as well as an input file to define the starting grid configuration.
 
@@ -118,18 +105,43 @@ In the project, the `RuleSet` class is responsible for evaluating cells based on
 )
 
 Select Graphic Rendition (SGR) control codes were used in the `renderer` module to color a special ASCII half-block character and the background behind it in the terminal in order to achieve uniformly sized cells on a grid, as rendering the cells using ASCII characters only would cause them to be taller.
-These escape codes were defined in ANSI X3.64, which gave them the 'ANSI escape code' name, but they were later adapted by the ECMA-48 @ecmainternationalControlFunctionsCoded1991 and ISO/IEC 6429 standards that most terminals comply with today.
+These escape codes were defined in ANSI X3.64, which gave them the 'ANSI escape code' name, but they were later adapted by the ECMA-48 @ecmainternationalControlFunctionsCoded1991 and ISO/IEC 6429 @internationalorganizationforstandardizationISOIEC64291992 standards that most terminals comply with today.
 
 #pagebreak()
 
 = Testing
 Manual testing and debugging was carried out throughout development to make sure the packages were robust and worked consistently with a variety of different user inputs and that any edge-cases could be ironed out. While the scope of the project did not require a comprehensive pipeline, the manual debugging and implemented unit tests were sufficient enough to validate the logic and stability of each solution.
 
+A total of twenty unit tests were written across the two packages, though only limited to the `grid`, `ruleset`, and `delivery` modules.
+```json
+============================= test session starts ===================================
+platform linux -- Python 3.13.7, pytest-9.0.1, pluggy-1.6.0
+rootdir: /home/user/projects/acit4420/exam
+collected 20 items
+
+tests/test_delivery.py ...........                                             [ 55%]
+tests/test_grid.py .....                                                       [ 80%]
+tests/test_ruleset.py ....                                                     [100%]
+
+============================= 20 passed in 0.03s ====================================
+```
+
 == Courier optimizer
 The `courier_optimizer` package was tested using small datasets to verify route optimizations and the correctness of cost and emission calculations. Mock delivery sets were manually constructed to ensure that the scoring and prioritization logic behaved as expected.
 
+The output of the `run.log`:
+```json
+2025-11-26 08:56:25,177 - INFO - --- Optimization Start: 2025-11-26 08:56:25 ---
+2025-11-26 08:56:25,177 - INFO - Calling function: main
+2025-11-26 08:56:25,177 - INFO - Input File: input.csv
+2025-11-26 08:56:25,177 - INFO - Depot Location: 59.91,10.738
+2025-11-26 08:56:25,177 - INFO - Mode: Walk, Criterion: cost
+2025-11-26 08:56:25,178 - INFO - Function main finished. Total Duration: 0.00s
+2025-11-26 08:56:25,178 - INFO - --- Optimization End ---
+```
+
 == Conway's Game of Life simulator
-The `grid` module was tested by comparing known Life patterns against their expected evolution steps. Oscillators such as blinkers and toads, as well as moving patterns like gliders, were used to validate that neighbor counting, grid wrapping behavior, and state transitions worked as intended. Tests included toroidal and non-toroidal grid configurations (wrapping) to confirm that boundary conditions were consistently applied. Additionally, manually calculated neighbor counts were compared against the module's output to confirm that the flat-list indexing scheme produced correct behaviors.
+The `grid` module was tested by comparing known Life patterns against their expected evolution steps. Oscillators such as blinkers, as well as moving patterns like gliders, were used to validate that neighbor counting, grid wrapping behavior, and state transitions worked as intended. Tests included toroidal and non-toroidal grid configurations (wrapping) to confirm that boundary conditions were consistently applied. Additionally, manually calculated neighbor counts were compared against the module's output to confirm that the flat-list indexing scheme produced correct behaviors.
 
 The `RuleSet` class underwent some targeted testing to ensure correct parsing of other Life-like rule definitions. Several rule strings including `B3/S23`, `B36/S23`, and intentionally malformed inputs, were evaluated. This verified that the metaprogrammed evaluation function returned predictable results for known neighbor configurations. Invalid rule strings correctly triggered exceptions, confirming that the DSL-like parsing logic could validate the strings consistently.
 
@@ -142,7 +154,7 @@ The development of the `courier_optimizer` and `conway` packages demonstrated th
 
 The courier optimizer successfully met the requirements of solving a multi-objective routing problem. By implementing a weighted heuristic on top of the Haversine distance formula, the system balances the competing needs of geographical efficiency and delivery urgency. The inclusion of comprehensive logging and data validation ensures the tool is robust enough for real-world data scenarios where input quality cannot be guaranteed.
 
-The Conway's Game of Life simulator highlighted the power of Python's dynamic nature. The use of a flat-list data structure for the grid proved to be an effective optimization for memory management, while the metaprogramming approach to rule parsing allowed for a highly extensible system. The separation of the simulation logic from the rendering layer ensures that the code remains modular and maintainable.
+The Conway's Game of Life simulator highlighted the power of Python's dynamic nature. The use of a flat-list data structure for the grid proved to be an effective optimization for memory management, while the metaprogramming approach for rule parsing allowed for a highly extensible system. The separation of the simulation logic from the rendering layer ensures that the code remains modular and maintainable.
 
 Ultimately, this project reinforced the importance of algorithmic analysis. Understanding the trade-offs between exact solutions and heuristics provided practical experience in structuring larger Python applications using Object-Oriented principles.
 
@@ -155,23 +167,5 @@ Ultimately, this project reinforced the importance of algorithmic analysis. Unde
 
 = Appendix
 
-== Sample files
-Sample configuration files
-
-`transport_modes.csv`
-#show raw: it => block(
-    fill: luma(240),
-    inset: 1em,
-    radius: 0.5em,
-    it
-)
-
-```csv
-type,speed,cost,co2_emissions
-Car,50,4,120
-Bicycle,15,0,0
-Walk,5,0,0
-```
-
 == Complete code
-GitHub repository link
+#link("https://www.github.com/noxalas/acit4420_scripting_exam")[GitHub repository link]

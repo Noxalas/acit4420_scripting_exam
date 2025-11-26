@@ -1,10 +1,81 @@
-INFO:root:Optimization run completed. Mode=Walk, Criterion=time, Deliveries=8, Time=2025-11-26 00:02:03.121531
-INFO:root:Function main ran for 0.000487s
-INFO:root:Optimization run completed. Mode=Car, Criterion=time, Deliveries=8, Time=2025-11-26 00:02:22.743011
-INFO:root:Function main ran for 0.000555s
-INFO:root:Optimization run completed. Mode=Car, Criterion=cost, Deliveries=8, Time=2025-11-26 00:03:00.550668
-INFO:root:Function main ran for 0.000572s
-INFO:root:Optimization run completed. Mode=Bicycle, Criterion=cost, Deliveries=8, Time=2025-11-26 00:03:29.621012
-INFO:root:Function main ran for 0.000581s
-INFO:root:Optimization run completed. Mode=Car, Criterion=time, Deliveries=8, Time=2025-11-26 05:49:06.417056
-INFO:root:Function main ran for 0.000695s
+2025-11-26 08:36:47,140 - INFO - --- Optimization Start: 2025-11-26 08:36:47 ---
+2025-11-26 08:36:47,140 - INFO - Calling function: main
+2025-11-26 08:41:34,804 - INFO - --- Optimization Start: 2025-11-26 08:41:34 ---
+2025-11-26 08:41:34,804 - INFO - Calling function: main
+2025-11-26 08:41:34,804 - INFO - Input File: input.csv
+2025-11-26 08:41:34,804 - INFO - Depot Location: 59.91,10.738
+2025-11-26 08:41:34,804 - INFO - Mode: Car, Criterion: co2
+2025-11-26 08:42:59,558 - INFO - --- Optimization Start: 2025-11-26 08:42:59 ---
+2025-11-26 08:42:59,559 - INFO - Calling function: main
+2025-11-26 08:42:59,559 - INFO - Input File: input.csv
+2025-11-26 08:42:59,559 - INFO - Depot Location: 59.91,10.738
+2025-11-26 08:42:59,559 - INFO - Mode: Car, Criterion: co2
+2025-11-26 08:43:32,901 - INFO - --- Optimization Start: 2025-11-26 08:43:32 ---
+2025-11-26 08:43:32,901 - INFO - Calling function: main
+2025-11-26 08:43:32,901 - INFO - Input File: input.csv
+2025-11-26 08:43:32,901 - INFO - Depot Location: 59.91,10.738
+2025-11-26 08:43:32,901 - INFO - Mode: Car, Criterion: co2
+2025-11-26 08:44:06,313 - INFO - --- Optimization Start: 2025-11-26 08:44:06 ---
+2025-11-26 08:44:06,313 - INFO - Calling function: main
+2025-11-26 08:44:06,313 - INFO - Input File: input.csv
+2025-11-26 08:44:06,313 - INFO - Depot Location: 59.91,10.738
+2025-11-26 08:44:06,313 - INFO - Mode: Car, Criterion: co2
+2025-11-26 08:44:06,314 - INFO - Function main finished. Total Duration: 0.00s
+2025-11-26 08:44:06,314 - INFO - --- Optimization End ---
+2025-11-26 08:44:19,299 - INFO - --- Optimization Start: 2025-11-26 08:44:19 ---
+2025-11-26 08:44:19,299 - INFO - Calling function: main
+2025-11-26 08:44:19,299 - INFO - Input File: input.csv
+2025-11-26 08:44:19,299 - INFO - Depot Location: 59.91,10.738
+2025-11-26 08:44:19,299 - INFO - Mode: Car, Criterion: cost
+2025-11-26 08:44:19,299 - INFO - Function main finished. Total Duration: 0.00s
+2025-11-26 08:44:19,299 - INFO - --- Optimization End ---
+2025-11-26 08:44:41,680 - INFO - --- Optimization Start: 2025-11-26 08:44:41 ---
+2025-11-26 08:44:41,680 - INFO - Calling function: main
+2025-11-26 08:44:41,680 - INFO - Input File: input.csv
+2025-11-26 08:44:41,680 - INFO - Depot Location: 59.91,10.738
+2025-11-26 08:44:41,680 - INFO - Mode: Car, Criterion: speed
+2025-11-26 08:44:41,680 - WARNING - Invalid criterion 'speed'. Defaulting to 'time'.
+2025-11-26 08:44:41,680 - INFO - Function main finished. Total Duration: 0.00s
+2025-11-26 08:44:41,680 - INFO - --- Optimization End ---
+2025-11-26 08:47:02,563 - INFO - --- Optimization Start: 2025-11-26 08:47:02 ---
+2025-11-26 08:47:02,563 - INFO - Calling function: main
+2025-11-26 08:47:02,563 - INFO - Input File: input.csv
+2025-11-26 08:47:02,563 - INFO - Depot Location: 59.91,10.738
+2025-11-26 08:47:02,563 - INFO - Mode: Walk, Criterion: time
+2025-11-26 08:47:02,563 - INFO - Function main finished. Total Duration: 0.00s
+2025-11-26 08:47:02,563 - INFO - --- Optimization End ---
+2025-11-26 08:47:22,474 - INFO - --- Optimization Start: 2025-11-26 08:47:22 ---
+2025-11-26 08:47:22,474 - INFO - Calling function: main
+2025-11-26 08:47:22,474 - INFO - Input File: input.csv
+2025-11-26 08:47:22,474 - INFO - Depot Location: 59.91,10.738
+2025-11-26 08:47:22,474 - INFO - Mode: Walk, Criterion: time
+2025-11-26 08:47:22,475 - INFO - Function main finished. Total Duration: 0.00s
+2025-11-26 08:47:22,475 - INFO - --- Optimization End ---
+2025-11-26 08:47:28,066 - INFO - --- Optimization Start: 2025-11-26 08:47:28 ---
+2025-11-26 08:47:28,066 - INFO - Calling function: main
+2025-11-26 08:47:28,066 - INFO - Input File: input.csv
+2025-11-26 08:47:28,066 - INFO - Depot Location: 59.91,10.738
+2025-11-26 08:47:28,066 - INFO - Mode: Walk, Criterion: cost
+2025-11-26 08:47:28,066 - INFO - Function main finished. Total Duration: 0.00s
+2025-11-26 08:47:28,066 - INFO - --- Optimization End ---
+2025-11-26 08:56:11,271 - INFO - --- Optimization Start: 2025-11-26 08:56:11 ---
+2025-11-26 08:56:11,271 - INFO - Calling function: main
+2025-11-26 08:56:11,271 - INFO - Input File: input.csv
+2025-11-26 08:56:11,271 - INFO - Depot Location: 59.91,10.738
+2025-11-26 08:56:11,271 - INFO - Mode: Walk, Criterion: co2
+2025-11-26 08:56:11,272 - INFO - Function main finished. Total Duration: 0.00s
+2025-11-26 08:56:11,272 - INFO - --- Optimization End ---
+2025-11-26 08:56:25,177 - INFO - --- Optimization Start: 2025-11-26 08:56:25 ---
+2025-11-26 08:56:25,177 - INFO - Calling function: main
+2025-11-26 08:56:25,177 - INFO - Input File: input.csv
+2025-11-26 08:56:25,177 - INFO - Depot Location: 59.91,10.738
+2025-11-26 08:56:25,177 - INFO - Mode: Walk, Criterion: cost
+2025-11-26 08:56:25,178 - INFO - Function main finished. Total Duration: 0.00s
+2025-11-26 08:56:25,178 - INFO - --- Optimization End ---
+2025-11-26 10:03:23,051 - INFO - --- Optimization Start: 2025-11-26 10:03:23 ---
+2025-11-26 10:03:23,052 - INFO - Calling function: main
+2025-11-26 10:03:23,052 - INFO - Input File: input.csv
+2025-11-26 10:03:23,052 - INFO - Depot Location: 59.91,10.738
+2025-11-26 10:03:23,052 - INFO - Mode: Walk, Criterion: cost
+2025-11-26 10:03:23,052 - INFO - Function main finished. Total Duration: 0.00s
+2025-11-26 10:03:23,052 - INFO - --- Optimization End ---
