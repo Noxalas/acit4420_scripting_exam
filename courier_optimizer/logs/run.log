@@ -1,0 +1,10 @@
+INFO:root:Optimization run completed. Mode=Walk, Criterion=time, Deliveries=8, Time=2025-11-26 00:02:03.121531
+INFO:root:Function main ran for 0.000487s
+INFO:root:Optimization run completed. Mode=Car, Criterion=time, Deliveries=8, Time=2025-11-26 00:02:22.743011
+INFO:root:Function main ran for 0.000555s
+INFO:root:Optimization run completed. Mode=Car, Criterion=cost, Deliveries=8, Time=2025-11-26 00:03:00.550668
+INFO:root:Function main ran for 0.000572s
+INFO:root:Optimization run completed. Mode=Bicycle, Criterion=cost, Deliveries=8, Time=2025-11-26 00:03:29.621012
+INFO:root:Function main ran for 0.000581s
+INFO:root:Optimization run completed. Mode=Car, Criterion=time, Deliveries=8, Time=2025-11-26 05:49:06.417056
+INFO:root:Function main ran for 0.000695s
