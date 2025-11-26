@@ -77,10 +77,7 @@ Invalid rows are not discarded silently. Instead, they are logged to a specific 
 
 == Conway's Game of Life simulator
 === Design overview
-Similarly to `courier_optimizer`, this package can be ran with command-line arguments, allowing for user-defined input. In this case, the user can supply the program a ruleset for use in cellular automata evolution (more on this later), as well as an input file to define the starting grid configuration.
-
-==== Pattern parsing and file I/O
-The `pattern_loader` module utilizes Python's `re` (regular expression) library to parse input files. 
+Similarly to `courier_optimizer`, this package can be ran with command-line arguments, allowing for user-defined input. In this case, the user can supply the program a ruleset for use in cellular automata evolution (more on this later).
 
 ==== Grid module
 The `grid` module provides an abstraction for managing the two-dimensional cellular automaton. Each cell in the grid can either be filled or empty, and the module exposes methods to set and query cells, as well as evolve the grid based on a provided rule set.
@@ -160,7 +157,6 @@ Ultimately, this project reinforced the importance of algorithmic analysis. Unde
 
 #pagebreak()
 
-= References
 #bibliography("references.bib", style: "apa")
 
 #pagebreak()

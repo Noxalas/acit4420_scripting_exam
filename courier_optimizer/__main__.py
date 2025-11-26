@@ -29,7 +29,6 @@ def calculate_metrics(distance: float, mode: str) -> tuple[float, float, float]:
 
 @log_time
 def main(args):
-    # 1. Initial Setup and Validation
     if not os.path.exists(args.input):
         logging.error(f"Input file '{args.input}' not found.")
         print(f"Error: Input file '{args.input}' not found.")
@@ -53,7 +52,6 @@ def main(args):
         logging.warning(f"Invalid criterion '{args.criterion}'. Defaulting to 'time'.")
         criterion = "time"
 
-    # 2. Load and Validate Deliveries
     deliveries = []
     rejected_rows = []
     fields = ["customer", "latitude", "longitude", "priority", "weight_kg"]

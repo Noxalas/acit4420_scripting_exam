@@ -24,7 +24,6 @@ def log_time(func):
         )
         logging.info(f"Calling function: {func.__name__}")
 
-        # Log key arguments if they are present in kwargs (expected from main)
         if "args" in kwargs:
             logging.info(f"Input File: {kwargs['args'].input}")
             logging.info(f"Depot Location: {kwargs['args'].depot}")
