@@ -1,0 +1,9 @@
+customer,latitude,longitude,priority,weight_kg
+Oslo City Hall,59.9139,10.7387,High,2.5
+Aker Brygge,59.9096,10.7245,Medium,1.2
+Grunerlokka Market,59.9230,10.7586,Low,3.1
+Nydalen School,59.9507,10.7604,High,0.8
+Majorstuen Station,59.9291,10.7183,Medium,5.0
+Toyen Museum,59.9125,10.7689,Low,0.4
+Bislett Stadium,59.9223,10.7333,Medium,1.8
+Storo Mall,59.9481,10.7814,High,2.0

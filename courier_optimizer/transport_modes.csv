@@ -1,0 +1,4 @@
+type,speed,cost,co2_emissions
+Car,50,4,120
+Bicycle,15,0,0
+Walk,5,0,0
